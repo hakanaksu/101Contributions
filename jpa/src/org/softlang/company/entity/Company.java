@@ -15,13 +15,21 @@ public class Company {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int cid;
+	private int id;
 	
 	private String name;
 	
 	@OneToMany(cascade=CascadeType.PERSIST)
 	private List<Department> depts = new LinkedList<Department>();
+	
+	public int getId() {
+		return id;
+	}
 
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	public String getName() {
 		return name;
 	}

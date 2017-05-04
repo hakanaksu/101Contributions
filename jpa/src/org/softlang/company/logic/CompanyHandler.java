@@ -90,10 +90,10 @@ public class CompanyHandler {
 		em.getTransaction().commit();
 	}
 
-	public Company loadCompany(int cid) {
+	public Company loadCompany(int id) {
 		if(!em.getTransaction().isActive())
 			em.getTransaction().begin();
-		Company c = em.find(Company.class, cid);
+		Company c = em.find(Company.class, id);
 		return c;
 	}
 	
