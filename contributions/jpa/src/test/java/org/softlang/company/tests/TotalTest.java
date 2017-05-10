@@ -19,7 +19,7 @@ public class TotalTest {
 		EntityManagerFactory emFactory = javax.persistence.Persistence.createEntityManagerFactory("jpa");
 		EntityManager em = emFactory.createEntityManager();
 		createSampleCompany(em);
-        Company c = loadCompany(em, 0);
+        Company c = loadCompany(em, "ACME Corporation");
         double total = total(c);		
         assertEquals(399747, total, 0);
         removeCompany(em, c);

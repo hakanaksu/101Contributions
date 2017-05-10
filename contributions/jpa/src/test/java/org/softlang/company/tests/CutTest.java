@@ -22,7 +22,7 @@ public class CutTest {
 		EntityManagerFactory emFactory = javax.persistence.Persistence.createEntityManagerFactory("jpa");
 		EntityManager em = emFactory.createEntityManager();
 		createSampleCompany(em);
-        Company c = loadCompany(em, 0);
+        Company c = loadCompany(em, "ACME Corporation");
         cut(em, c);
         double total = total(c);		
         assertEquals(399747 / 2.0d, total, 0);

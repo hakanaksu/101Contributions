@@ -83,10 +83,13 @@ public class Persistence {
 		em.getTransaction().commit();
 	}
 
-	public static Company loadCompany(EntityManager em, int id) {
+	public static Company loadCompany(EntityManager em, String name) {
 		if(!em.getTransaction().isActive())
 			em.getTransaction().begin();
-		Company c = em.find(Company.class, id);
+		Company c = 
+				(Company) em.createQuery("Select c from Company c where c.name = :name ", Company.class)
+				.setParameter("name", name)
+				.getSingleResult();
 		return c;
 	}
 	
