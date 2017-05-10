@@ -1,4 +1,4 @@
-package org.softlang.company.entity;
+package org.softlang.company.model;
 
 import java.util.LinkedList;
 import java.util.List;

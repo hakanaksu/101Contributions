@@ -1,4 +1,4 @@
-package org.softlang.company.entity;
+package org.softlang.company.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
