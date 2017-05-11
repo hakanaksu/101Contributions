@@ -19,7 +19,7 @@ public class Company {
 	
 	private String name;
 	
-	@OneToMany(cascade=CascadeType.PERSIST)
+	@OneToMany(cascade=CascadeType.ALL)
 	private List<Department> depts = new LinkedList<Department>();
 	
 	public int getId() {
